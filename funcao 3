@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+
+float media( float N1, float N2, float N3, char L){
+float  resp; 
+
+if(L=='A'){
+	resp=(N1+N2+N3)/3;
+}
+else if(L=='P'){
+	resp=(N1+N2*3+N3*2)/10;
+}
+return resp;
+}
+
+int main(){
+	float nota1,nota2,nota3;
+	char tipomedia;
+	printf("********************************SEJA BEM VINDO********************************\n\n");
+	printf("Informe o tipo de media//(A ou P):\n");
+	scanf("%c", &tipomedia);
+	printf("\n\n\n");
+	printf("Digite aqui as tres notas do aluno: \n");
+	scanf("%f %f %f",&nota1,&nota2,&nota3);
+	printf("----------------------------------------------------------\n\n");
+	float mediafinal=media(nota1,nota2,nota3,tipomedia);
+	printf("Media final: %2.f",mediafinal);
+	printf("\n\n----------------------------------------------------------");
+	
+	system("pause>>NULL");
+	return 0;
+}
